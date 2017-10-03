@@ -12,4 +12,11 @@ class HelloController extends ControllerBase {
             "#markup" => hello_hello_world(),
         ];
     }
+
+    public function welcome()
+    {
+        return [
+            "#markup" => hello_welcome(),
+        ];
+    }
 }

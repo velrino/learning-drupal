@@ -1,5 +1,18 @@
 <?php
 
-function hello_hello_world() {
+use Drupal\user\Entity\User;
+
+function hello_hello_world() 
+{
     return t('Hello World!');
+}
+
+function hello_welcome() 
+{
+    $user = User::load(\Drupal::currentUser()->id());
+
+    if(empty($user->get('uid')->value))
+        return t('Welcome Visitor');
+    else
+        return t("Welcome ".$user->getusername() );
 }
