@@ -1,0 +1,22 @@
+<table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for key, value in List %}
+            <tr>
+                <th>{{ value.name }}</th>
+                <th>{{ value.email }}</th>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+            </tr>
+        </tfoot>
+    </table>

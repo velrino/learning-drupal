@@ -1,0 +1,6 @@
+rest:
+ title: Rest!
+ Menu_name: main
+ route_name: rest
+ expanded: TRUE
+ weight: 100

@@ -1,0 +1,6 @@
+name: Rest
+type: module
+description: 'My first REST Drupal 8 module.'
+package: Awesome modules
+version: 1.0
+core: '8.x'

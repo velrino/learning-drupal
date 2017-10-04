@@ -1,0 +1,6 @@
+rest:
+ path: 'rest'
+ defaults:
+  _controller: '\Drupal\rest\Controller\RestController::list'
+ requirements:
+  _permission: 'access content'

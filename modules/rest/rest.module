@@ -1,0 +1,27 @@
+<?php
+
+
+function Request(string $url,string $method="GET",array $data = [],string $token = '')
+{
+    $curl = new anlutro\cURL\cURL;
+    $request = $curl->newRequest($method,$url,$data)->setHeader('Accept-Charset', 'utf-8');
+    return $request->send();
+}
+
+function rest_theme() {
+    $theme['index_page'] = [
+      'variables' => [
+          'List' => rest_list()
+        ],
+      'template' => 'index'
+    ];
+    return $theme;
+  }
+
+function rest_list()
+{
+    $response = Request('https://jsonplaceholder.typicode.com/users');
+    return json_decode($response->body, true);
+    var_dump( json_decode($response->body, true) );
+    return $return;
+}
